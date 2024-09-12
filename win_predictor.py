@@ -19,8 +19,8 @@ llm = ChatGroq(
 )
 
 def get_prompt(team1,team2):
-  team1_stats=df[df["Team"]==team1].to_markdown()
-  team2_stats=df[df["Team"]==team2].to_markdown()
+  team1_stats=ncaaf_df[ncaaf_df["Team"]==team1].to_markdown()
+  team2_stats=ncaaf_df[ncaaf_df["Team"]==team2].to_markdown()
   
   prompt=f"""Below given details are different metrics two football teams accross different matches.
   # Team1 Stats:
