@@ -3,7 +3,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-# from langchain_groq import ChatGroq
+from langchain_groq import ChatGroq
 
 ncaaf_df=pd.read_csv("NCAAF Stats - MAIN FOR FIVER GUY.csv")
 ncaaf_df.dropna(inplace=True)
@@ -47,8 +47,8 @@ team1=st.selectbox("Team-1", teams)
 team2=st.selectbox("Team-2", teams,index=1)
 
 if st.button("Predict"):
-	# res=llm.invoke(get_prompt(team1,team2))
-	# st.balloons()
-	# st.header("Winner is")
-	# st.write(res.content)
+	res=llm.invoke(get_prompt(team1,team2))
+	st.balloons()
+	st.header("Winner is")
+	st.write(res.content)
 
