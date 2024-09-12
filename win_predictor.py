@@ -3,7 +3,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-from langchain_groq import ChatGroq
+# from langchain_groq import ChatGroq
 
 ncaaf_df=pd.read_csv("NCAAF Stats - MAIN FOR FIVER GUY.csv")
 ncaaf_df.dropna(inplace=True)
@@ -12,11 +12,11 @@ ncaaf_df.rename(columns={"Sheet Name :-": "Team"}, inplace=True)
 GROQ_API_KEY="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"
 
 
-llm = ChatGroq(
-    temperature=0,
-    model="llama-3.1-70b-versatile",
-    api_key=GROQ_API_KEY
-)
+# llm = ChatGroq(
+#     temperature=0,
+#     model="llama-3.1-70b-versatile",
+#     api_key=GROQ_API_KEY
+# )
 
 def get_prompt(team1,team2):
 
@@ -47,8 +47,8 @@ team1=st.selectbox("Team-1", teams)
 team2=st.selectbox("Team-2", teams,index=1)
 
 if st.button("Predict"):
-	res=llm.invoke(get_prompt(team1,team2))
-	st.balloons()
-	st.header("Winner is")
-	st.write(res.content)
+	# res=llm.invoke(get_prompt(team1,team2))
+	# st.balloons()
+	# st.header("Winner is")
+	# st.write(res.content)
 
