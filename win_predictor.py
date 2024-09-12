@@ -12,11 +12,11 @@ ncaaf_df.rename(columns={"Sheet Name :-": "Team"}, inplace=True)
 GROQ_API_KEY="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"
 
 
-# llm = ChatGroq(
-#     temperature=0,
-#     model="llama-3.1-70b-versatile",
-#     api_key=GROQ_API_KEY
-# )
+llm = ChatGroq(
+    temperature=0,
+    model="llama-3.1-70b-versatile",
+    api_key=GROQ_API_KEY
+)
 
 def get_prompt(team1,team2):
 
