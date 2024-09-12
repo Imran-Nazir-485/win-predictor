@@ -1,4 +1,4 @@
-pip install langchain-groq
+#pip install langchain-groq
 
 import streamlit as st
 import pandas as pd
