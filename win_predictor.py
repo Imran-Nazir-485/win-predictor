@@ -19,9 +19,8 @@ llm = ChatGroq(
 )
 
 def get_prompt(team1,team2):
-
-  team1_stats=ncaaf_df[ncaaf_df["Team"]==team1].to_markdown()
-  team2_stats=ncaaf_df[ncaaf_df["Team"]==team2].to_markdown()
+  team1_stats=df[df["Team"]==team1].to_markdown()
+  team2_stats=df[df["Team"]==team2].to_markdown()
   
   prompt=f"""Below given details are different metrics two football teams accross different matches.
   # Team1 Stats:
@@ -30,7 +29,7 @@ def get_prompt(team1,team2):
   # Team2 Stats:
   {team2_stats}
     Great Job. Analyze these stats and predict the winner of the match based on these stats, use your knowledge and find previous matches results between these two teams\
-  and your cognitive skills. Just give me winner team name output not long description.
+  and your cognitive skills. Just give me winner team name output and score margin only two things as output.
   Here is the team1:{team1} and team2: {team2}
   """
   return prompt
