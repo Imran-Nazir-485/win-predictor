@@ -1,1 +1,1 @@
-pip install langchain-groq
+uv pip install langchain-groq
