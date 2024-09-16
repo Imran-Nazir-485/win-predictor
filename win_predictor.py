@@ -5,7 +5,16 @@ import pandas as pd
 import numpy as np
 from langchain_groq import ChatGroq
 
-ncaaf_df=pd.read_csv("NCAAF Stats - MAIN FOR FIVER GUY.csv")
+document_id = "1gVtZ1Cvu8vvvwMzakWjopIL17xNc32F01Wx4O65gKAQ"
+tab_name = "MAIN%20FOR%20FIVERR%20GUY"
+
+# Use the correct URL format for exporting to CSV
+full_url = f"https://docs.google.com/spreadsheets/d/{document_id}/gviz/tq?tqx=out:csv&sheet={tab_name}"
+
+# df = pd.read_csv(full_url)
+
+
+ncaaf_df=pd.read_csv(full_url)
 ncaaf_df.dropna(inplace=True)
 ncaaf_df.rename(columns={"Sheet Name :-": "Team"}, inplace=True)
 
