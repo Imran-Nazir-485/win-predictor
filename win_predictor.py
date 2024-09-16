@@ -15,8 +15,8 @@ full_url = f"https://docs.google.com/spreadsheets/d/{document_id}/gviz/tq?tqx=ou
 
 
 ncaaf_df=pd.read_csv(full_url)
-ncaaf_df.dropna(inplace=True)
-ncaaf_df.rename(columns={"Sheet Name :-": "Team"}, inplace=True)
+# ncaaf_df.dropna(inplace=True)
+ncaaf_df.rename(columns={"Sheet Name :- ": "Team"}, inplace=True)
 
 GROQ_API_KEY="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"
 
