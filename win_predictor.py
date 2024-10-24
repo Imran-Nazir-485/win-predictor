@@ -48,7 +48,9 @@ def get_prompt(team1,team2):
 
 teams=ncaaf_df["Team"].values.tolist()
 
-st.title("AI Win Predictor")
+col1,col2,col3=st.columns(3)
+with col2:
+	st.title("AI Win Predictor")
 
 
 team1=st.selectbox("Team-1", teams)
