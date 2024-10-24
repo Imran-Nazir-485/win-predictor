@@ -48,7 +48,7 @@ def get_prompt(team1,team2):
 
 teams=ncaaf_df["Team"].values.tolist()
 
-col1,col2,col3=st.columns(3)
+col1,col2=st.columns(2)
 with col2:
 	st.title("AI Win Predictor")
 
