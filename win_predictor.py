@@ -18,7 +18,7 @@ ncaaf_df=pd.read_csv(full_url)
 # ncaaf_df.dropna(inplace=True)
 ncaaf_df.rename(columns={"Sheet Name :- ": "Team"}, inplace=True)
 
-GROQ_API_KEY="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"
+GROQ_API_KEY="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"
 
 
 llm = ChatGroq(
